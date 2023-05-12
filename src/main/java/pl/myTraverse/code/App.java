@@ -1,4 +1,4 @@
-package pl.myexamples.code;
+package pl.myTraverse.code;
 
 public class App {
 

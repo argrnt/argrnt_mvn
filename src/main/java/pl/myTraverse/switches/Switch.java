@@ -60,7 +60,7 @@ public class Switch {
                 sum += 31;
                 break;
             default:
-            System.err.println("Incorrect number of mounth");
+                throw new RuntimeException("Incorrect number of mounth");
         }
         return sum;
     }

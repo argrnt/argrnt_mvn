@@ -15,6 +15,7 @@ class SwitchTest {
         aSwitch = new Switch();
     }
 
+
     @Test
     void shouldCalculateUSD() {
         //        given
@@ -75,11 +76,9 @@ class SwitchTest {
 
         //        when
         //        then
-//        double result = aSwitch.calculate(amount, currency);
-        IllegalArgumentException illegalArgumentException = assertThrows(IllegalArgumentException.class,
-                () -> aSwitch.calculate(amount, currency));
-
+        assertThrows(IllegalArgumentException.class, () -> aSwitch.calculate(amount, currency));
     }
+
 
     @Test
     void shouldCalculateOtherCurrency_2() {
@@ -93,5 +92,129 @@ class SwitchTest {
         assertEquals("Error! Following currency: " + currency + " is not available",
                 illegalArgumentException.getMessage());
     }
+
+
+// tests for howManyDays(int mounth)
+
+    @Test
+    void checkSumFromJanuaryHowManyDays() {
+//        given
+        int month = 1;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(31, sum);
+    }
+
+    @Test
+    void checkSumFromFebruaryHowManyDays() {
+//        given
+        int month = 2;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(59, sum);
+    }
+
+    @Test
+    void checkSumFromMarchHowManyDays() {
+//        given
+        int month = 3;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(90, sum);
+    }
+
+    @Test
+    void checkSumFromAprilHowManyDays() {
+//        given
+        int month = 4;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(120, sum);
+    }
+
+    @Test
+    void checkSumFromMayHowManyDays() {
+//        given
+        int month = 5;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(151, sum);
+    }
+
+    @Test
+    void checkSumFromJuneHowManyDays() {
+//        given
+        int month = 6;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(181, sum);
+    }
+
+    @Test
+    void checkSumFromJulyHowManyDays() {
+//        given
+        int month = 7;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(212, sum);
+    }
+
+    @Test
+    void checkSumFromAugustHowManyDays() {
+//        given
+        int month = 8;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(243, sum);
+    }
+
+    @Test
+    void checkSumFromSeptemberHowManyDays() {
+//        given
+        int month = 9;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(273, sum);
+    }
+
+    @Test
+    void checkSumFromOctoberHowManyDays() {
+//        given
+        int month = 10;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(304, sum);
+    }
+
+    @Test
+    void checkSumFromNovemberHowManyDays() {
+//        given
+        int month = 11;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(334, sum);
+    }
+
+    @Test
+    void checkSumFromDecemberHowManyDays() {
+//        given
+        int month = 12;
+//        when
+        int sum = aSwitch.howManyDays(month);
+//        then
+        assertEquals(365, sum);
+    }
+
 
 }

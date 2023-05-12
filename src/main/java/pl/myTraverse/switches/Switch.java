@@ -13,25 +13,25 @@ public class Switch {
     //    Following currency: {currency} is not available"
     //    Tip: how to throw an exception: throw new IllegalArgumentException("Error msg");
 
-    private double calculate(double amountInPLN, String currency) {
+    public double calculate(double amountInPLN, String currency) {
         switch (currency) {
             case "USD":
-                return amountInPLN * 4.19;
+                return amountInPLN / 4.19;
             case "GBP":
-                return amountInPLN * 5.18;
+                return amountInPLN / 5.18;
             case "EUR":
-                return amountInPLN * 4.54;
+                return amountInPLN / 4.54;
             case "CHF":
-                return amountInPLN * 4.31;
+                return amountInPLN / 4.31;
             default:
-                throw new IllegalArgumentException("Error! Following currency: {currency} is not available");
+                throw new IllegalArgumentException("Error! Following currency: "+currency+" is not available");
         }
     }
 
 //  Napisz switch, który policzy dla podanego numeru miesiąca, ile dni minęło od początku roku, do
 //  końcowego dnia podanego miesiąca. Załóż, że luty ma 28 dni.
 
-    private int howManyDays(int mounth) {
+    public int howManyDays(int mounth) {
         int sum = 0;
         switch (mounth) {
             case 12:

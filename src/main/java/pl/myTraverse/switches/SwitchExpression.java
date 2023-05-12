@@ -1,4 +1,4 @@
-package pl.myexamples.task3;
+package pl.myTraverse.switches;
 
 public class SwitchExpression {
 }

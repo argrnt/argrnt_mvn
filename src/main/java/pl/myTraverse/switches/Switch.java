@@ -1,12 +1,7 @@
 package pl.myTraverse.switches;
 
 public class Switch {
-    public static void main(String[] args) {
 
-        int i = howManyDays(13);
-        System.out.println(i);
-
-    }
 
     //    Program should convert money in PLN to foreign currencies (USD,GBP,EUR,CHF)
     //    Assume following currency rate:
@@ -18,7 +13,7 @@ public class Switch {
     //    Following currency: {currency} is not available"
     //    Tip: how to throw an exception: throw new IllegalArgumentException("Error msg");
 
-    private static double calculate(double amountInPLN, String currency) {
+    private double calculate(double amountInPLN, String currency) {
         switch (currency) {
             case "USD":
                 return amountInPLN * 4.19;
@@ -36,7 +31,7 @@ public class Switch {
 //  Napisz switch, który policzy dla podanego numeru miesiąca, ile dni minęło od początku roku, do
 //  końcowego dnia podanego miesiąca. Załóż, że luty ma 28 dni.
 
-    private static int howManyDays(int mounth) {
+    private int howManyDays(int mounth) {
         int sum = 0;
         switch (mounth) {
             case 12:

@@ -1,4 +1,4 @@
-package pl.myTraverse.task2;
+package pl.myTraverse.conditionals;
 
 import java.util.Random;
 

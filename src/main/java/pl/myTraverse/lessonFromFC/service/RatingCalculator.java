@@ -8,6 +8,10 @@ public class RatingCalculator {
 
     private BookRatingService bookRatingService;
 
+
+    public RatingCalculator() {
+    }
+
     public RatingCalculator(BookRatingService bookRatingService) {
         this.bookRatingService = bookRatingService;
     }

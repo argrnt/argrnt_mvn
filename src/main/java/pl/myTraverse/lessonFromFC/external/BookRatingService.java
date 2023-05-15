@@ -4,6 +4,6 @@ import pl.myTraverse.lessonFromFC.model.Author;
 
 public interface BookRatingService {
 
-    double getRating(String title, Author author)throws IllegalStateException;
+    double getRating(String title, Author author) throws IllegalStateException;
 
 }

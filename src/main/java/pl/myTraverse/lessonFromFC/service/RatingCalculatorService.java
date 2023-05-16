@@ -14,9 +14,11 @@ public class RatingCalculatorService {
         this.ratingCalculator=new RatingCalculator();
     }
 
-    public Rating calculateWithExternalService(Book book) {
-        double averageOpinion = bookRatingService.getRating(book.getTitle(), book.getAuthor());
-        return ratingCalculator.calculateRating(averageOpinion);
+    public Rating calculateWithExternalService(Book book) throws IllegalStateException{
+
+            double averageOpinion = bookRatingService.getRating(book.getTitle(), book.getAuthor());
+            return ratingCalculator.calculateRating(averageOpinion);
+
     }
 
 
